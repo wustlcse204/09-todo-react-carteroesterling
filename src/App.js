@@ -55,15 +55,14 @@ class App extends Component {
   remove(event) {
     event.preventDefault();
     var self = this;
-    var removing = event.target.parentNode;
-    var removingID = removing.id;
+    var removing = event.target.parentNode.id;
     var createRequest = new XMLHttpRequest();
     createRequest.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {
         // You need the id of the todo you want to delete as a variable.
         const remainingTodos = self.state.todos.filter((todo) => {
           // Looping through all todos, if the id of the current todo DOES NOT equal the id of the todo we want to delete, keep it
-          if (todo.id !== removingID) {
+          if (todo.id !== removing) {
             return todo;
           }
         });
@@ -71,7 +70,7 @@ class App extends Component {
         self.setState({ todos: remainingTodos });
       }
     };
-    createRequest.open("DELETE", "https://cse204.work/todos/" + removingID, true);
+    createRequest.open("DELETE", "https://cse204.work/todos/" + removing, true);
     createRequest.setRequestHeader("x-api-key", "436e43-c10a11-0b4d66-aca258-8b38cb");
     createRequest.send();
   }
@@ -93,10 +92,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="content">
         <h1>Carter's ToDo App</h1>
         <NewTodo addItem={this.addItem} onChange={this.onChange} input={this.state.input} />
-        <button id="sorting" onClick={this.alphabet}>Sort</button>
+        <button id = "sort" className="sort" onClick={this.alphabet}>Sort</button>
         {this.state.todos.map((todo) =>
           <Todo key={todo.id} id={todo.id} completed={todo.completed}
             text={todo.text} remove={this.remove} />

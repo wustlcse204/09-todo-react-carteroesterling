@@ -1,75 +1,86 @@
 body {
-    background-color: whitesmoke;
-  }
-  
-  h1 {
-     display: inline-block;
-     position: relative;
-     text-align: center;
-     color: black;
-     width: 100%;
-  }
-  
-  #entry-box {
-     display: block;
-     margin: 10px auto;
-     height: 25px;
-     width: 250px;
-     text-align: center;
-     font-size: 20px;
-     padding: 5px;
-  }
-  
-  #submit {
-     display: block;
-     margin: 10px auto;
-     float: none;
-     background-color: navy;
-     color: white;
-     position: relative;
-     width: auto;
-     height: auto;
-  }
-  
-  
-  p li {
-     list-style-type: none;
-     background-color:whitesmoke;
-     padding: 20px auto;
-     font-size: 25px;
-     cursor: pointer;
-     display: inline-block;
-     position: relative;
-     text-align: center;
-     width: 100%;
-  }
-  
-  p li:hover{
-     background-color:rgb(179, 179, 179)
-  }
-  
-  p li.completed {
-     background: #888;
-     color: #fff;
-     text-decoration: line-through;
-   }
-  
-  
-  /*JS ELEMENTS*/
-  button {
-     color: black;
-     background-color:transparent;
-     position: absolute;
-     right: 0;
-     border:none;
-     padding: 6.7px 10px;
-     margin: auto 10px;
-     width: auto;
-     height: auto;
-  }
-  
-  button:hover, #submit:hover {
-     background-color: deepskyblue;
-     cursor: pointer;
-  }
-  
+   background-color: whitesmoke;
+ }
+ 
+ h1 {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: black;
+    width: 100%;
+ }
+
+ #sort {
+   display: flex;
+   margin: 10px auto;
+   float: none;
+   background-color: navy;
+   color: white;
+   position: relative;
+   width: auto;
+   height: auto;
+ }
+ 
+ #entry-box {
+    display: block;
+    margin: 10px auto;
+    height: 25px;
+    width: 250px;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+ }
+ 
+ #submit {
+    display: flex;
+    margin: 10px auto;
+    float: none;
+    background-color: navy;
+    color: white;
+    position: relative;
+    width: auto;
+    height: auto;
+ }
+ 
+ 
+ p {
+    list-style-type: none;
+    background-color:whitesmoke;
+    padding: 20px auto;
+    font-size: 25px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+ }
+ 
+ p:hover{
+    background-color:rgb(179, 179, 179)
+ }
+ 
+ #checkbox:checked + p {
+   background: #888;
+   color: #fff;
+   text-decoration: line-through;
+ }
+ 
+ 
+ /*JS ELEMENTS*/
+ button {
+    color: black;
+    background-color:transparent;
+    position: absolute;
+    right: 0;
+    border:none;
+    padding: 6.7px 10px;
+    margin: auto 10px;
+    width: auto;
+    height: auto;
+ }
+ 
+ button:hover, #submit:hover, #sort:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
+ }
+ 
