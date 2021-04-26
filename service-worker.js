@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/09-todo-react-carteroesterling/precache-manifest.cc3ce48289c1af45c511edab813a5889.js"
+  "/09-todo-react-carteroesterling/precache-manifest.74424d9b984d4569e60952cefff2d872.js"
 );
 
 workbox.clientsClaim();
