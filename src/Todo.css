@@ -56,17 +56,6 @@ body {
   
   
   /*JS ELEMENTS*/
-  button {
-     color: black;
-     background-color:transparent;
-     position: absolute;
-     right: 0;
-     border:none;
-     padding: 6.7px 10px;
-     margin: auto 10px;
-     width: auto;
-     height: auto;
-  }
 
   #checkbox {
     position: absolute;
@@ -77,11 +66,3 @@ body {
     width: auto;
     height: auto;
  }
-
-
-  
-  button:hover, #submit:hover, #checkbox:hover {
-     background-color: deepskyblue;
-     cursor: pointer;
-  }
-  
